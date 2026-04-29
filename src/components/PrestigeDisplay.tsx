@@ -1,10 +1,9 @@
-import { Award, Star, Trophy } from 'lucide-react';
+import { Star, Trophy } from 'lucide-react';
 import { saveManager } from '../game/SaveManager';
 import { dailyChallengeManager } from '../game/DailyChallenge';
 
 export function PrestigeDisplay() {
   const level = saveManager.getPrestigeLevel();
-  const points = saveManager.getPrestigePoints();
   const multiplier = 1 + (level * 0.1);
   
   return (

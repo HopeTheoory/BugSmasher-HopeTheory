@@ -56,9 +56,6 @@ export class Leaderboard {
     let position = this.entries.findIndex(e => score > e.score);
     if (position === -1) position = this.entries.length;
 
-    // Check if it's a new record
-    const isNewRecord = position === 0 && this.entries.length > 0 ? false : position < MAX_ENTRIES;
-    
     // Only add if it makes top 10
     if (position < MAX_ENTRIES) {
       this.entries.splice(position, 0, entry);

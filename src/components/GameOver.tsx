@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Skull, RotateCcw, Home, Trophy, Target, Layers, Share2, Star, Globe, Medal } from 'lucide-react';
+import { Skull, RotateCcw, Home, Trophy, Target, Layers, Share2, Globe, Medal } from 'lucide-react';
 import { soundManager } from '../game/SoundManager';
 import { leaderboard } from '../game/Leaderboard';
 import { saveManager } from '../game/SaveManager';
@@ -20,8 +20,6 @@ export function GameOver({ score, waves, kills, onRetry, onMainMenu }: GameOverP
   const [isNewHighScore, setIsNewHighScore] = useState(false);
   const [globalRank, setGlobalRank] = useState(0);
   const [rank, setRank] = useState(0);
-  const [dailyChallengeComplete, setDailyChallengeComplete] = useState(false);
-  const [challengeBonus, setChallengeBonus] = useState(0);
 
   useEffect(() => {
     const isHigh = leaderboard.isHighScore(score);
@@ -35,11 +33,10 @@ export function GameOver({ score, waves, kills, onRetry, onMainMenu }: GameOverP
 
     const challenge = dailyChallengeManager.getTodayChallenge();
     const completed = dailyChallengeManager.checkCompletion(challenge, score, kills, waves, 0, 0);
-    setDailyChallengeComplete(completed);
-    
+
     if (completed && !saveManager.hasCompletedDailyChallenge()) {
       saveManager.completeDailyChallenge();
-      setChallengeBonus(saveManager.getDailyChallengeBonus());
+      saveManager.getDailyChallengeBonus();
     }
   }, [score, waves, kills]);
 

@@ -7,7 +7,6 @@ import { authManager } from './AuthManager';
 import { getSupabaseUrl, getSupabaseAnonKey } from './supabaseConfig';
 
 const LEADERBOARD_KEY = 'bugsmasher_leaderboard';
-const FRIENDS_KEY = 'bugsmasher_friends';
 
 let supabase: SupabaseClient | null = null;
 

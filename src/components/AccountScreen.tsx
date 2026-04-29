@@ -1,4 +1,4 @@
-import { X, User, Mail, Lock, Crown, Trophy, LogOut, ArrowRight, AlertCircle, CheckCircle, Star, Flame, Gamepad2 } from 'lucide-react';
+import { X, User, Crown, LogOut, AlertCircle, CheckCircle, Star } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { authManager } from '../game/database/AuthManager';
 import { statsManager } from '../game/database/StatsManager';

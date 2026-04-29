@@ -1,4 +1,4 @@
-import { Shield, Zap, Crosshair, Heart } from 'lucide-react';
+import { Zap, Crosshair, Heart } from 'lucide-react';
 import { motion, Variants } from 'motion/react';
 import { soundManager } from '../game/SoundManager';
 import { GameConfig } from '../game/GameConfig';

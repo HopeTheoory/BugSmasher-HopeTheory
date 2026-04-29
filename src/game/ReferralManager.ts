@@ -118,7 +118,7 @@ export class ReferralManager {
     return REWARD_TIERS;
   }
 
-  getProgressToReward(referrals: number): { current: ReferralReward | null; next: ReferralReward | null } {
+  getProgressToReward(_referrals: number): { current: ReferralReward | null; next: ReferralReward | null } {
     let current = null;
     let next = null;
     

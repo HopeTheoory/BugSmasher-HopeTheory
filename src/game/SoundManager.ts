@@ -15,8 +15,8 @@ export class SoundManager {
       const savedMute = localStorage.getItem('bugsmasher_muted');
       if (savedVol !== null) this.volume = parseFloat(savedVol);
       if (savedMute !== null) this.isMuted = savedMute === 'true';
-    } catch (e) {
-      console.warn("Could not load audio settings", e);
+    } catch (_e) {
+      console.warn("Could not load audio settings", _e);
     }
   }
 
@@ -24,8 +24,8 @@ export class SoundManager {
     try {
       localStorage.setItem('bugsmasher_volume', this.volume.toString());
       localStorage.setItem('bugsmasher_muted', this.isMuted.toString());
-    } catch (e) {
-      console.warn("Could not save audio settings", e);
+    } catch (_e) {
+      console.warn("Could not save audio settings", _e);
     }
   }
 
@@ -87,7 +87,7 @@ export class SoundManager {
       
       osc.start();
       osc.stop(this.ctx.currentTime + duration);
-    } catch (e) {
+    } catch (_e) {
       // Ignore audio errors if context is in a weird state
     }
   }

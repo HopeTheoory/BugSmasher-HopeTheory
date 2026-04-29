@@ -1,5 +1,5 @@
 import { GameConfig } from './GameConfig';
-import { GameEngine, Bug } from './GameEngine';
+import { GameEngine } from './GameEngine';
 import { biomeManager } from './BiomeManager';
 
 export class WaveManager {

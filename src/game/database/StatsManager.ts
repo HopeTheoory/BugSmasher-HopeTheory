@@ -3,7 +3,7 @@
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import type { UserStats, Achievement } from './types';
-import { ACHIEVEMENTS_LIST, XP_PER_LEVEL } from './types';
+import { ACHIEVEMENTS_LIST } from './types';
 import { authManager } from './AuthManager';
 import { getSupabaseUrl, getSupabaseAnonKey } from './supabaseConfig';
 
@@ -218,7 +218,7 @@ export class StatsManager {
     }
   }
 
-  private checkAchievements(score: number, wave: number, kills: number): void {
+  private checkAchievements(score: number, wave: number, _kills: number): void {
     const stats = this.ensureStats();
 
     for (const achievement of this.achievements) {

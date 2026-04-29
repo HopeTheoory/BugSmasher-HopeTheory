@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingBag, Lock, Check, X, Diamond, Award } from 'lucide-react';
+import { ShoppingBag, Lock, Check, X, Diamond } from 'lucide-react';
 import { COSMETICS, cosmeticsManager } from '../game/CosmeticsManager';
 import { saveManager } from '../game/SaveManager';
 
