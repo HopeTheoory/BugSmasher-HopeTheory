@@ -69,6 +69,7 @@ describe('GameEngine', () => {
   });
 
   afterEach(() => {
+    engine.destroy();
     vi.restoreAllMocks();
   });
 
@@ -108,6 +109,32 @@ describe('GameEngine', () => {
     expect(bug.hp).toBe(0);
     expect(engine.bugs.length).toBe(0);
     expect(engine.score).toBe(10);
+  });
+
+
+  it('should complete a cleared wave, expose upgrade state, and resume the next wave', () => {
+    const onWaveComplete = vi.fn();
+    engine.onWaveComplete = onWaveComplete;
+    engine.isRunning = true;
+    engine.wave = 1;
+    engine.startWave();
+
+    engine.waveManager.bugsToSpawn = 0;
+    engine.bugs = [];
+    engine.waveManager.update(0.016);
+
+    expect(onWaveComplete).toHaveBeenCalledWith(1);
+    expect(engine.wave).toBe(2);
+    expect(engine.isRunning).toBe(false);
+    expect(engine.waveManager.waveActive).toBe(false);
+
+    engine.resume();
+
+    expect(engine.isRunning).toBe(true);
+    expect(engine.waveManager.waveActive).toBe(true);
+    expect(engine.waveManager.bugsToSpawn).toBe(
+      GameConfig.waves.baseBugs + 2 * GameConfig.waves.bugsPerWave,
+    );
   });
 
   it('should activate shield powerup', () => {

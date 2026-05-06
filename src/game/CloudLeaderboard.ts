@@ -61,7 +61,7 @@ export class CloudLeaderboard {
     return all.slice(0, 25);
   }
 
-  submitScore(score: number, wave: number, name: string, biome: string): number {
+  submitScore(score: number, _wave: number, _name: string, _biome: string): number {
     const all = [...MOCK_PLAYERS];
     let insertIndex = all.length;
     

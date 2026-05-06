@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Play, Gift, X } from 'lucide-react';
+import { Gift, X } from 'lucide-react';
 import { adManager } from '../game/AdManager';
 
 interface RewardedAdButtonProps {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Skull, RotateCcw, Home, Trophy, Target, Layers, Share2, Star, Globe, Medal } from 'lucide-react';
+import { Skull, RotateCcw, Home, Trophy, Target, Layers, Share2, Globe, Medal } from 'lucide-react';
 import { soundManager } from '../game/SoundManager';
 import { leaderboard } from '../game/Leaderboard';
 import { saveManager } from '../game/SaveManager';
@@ -117,6 +117,12 @@ export function GameOver({ score, waves, kills, onRetry, onMainMenu }: GameOverP
           </div>
         )}
         
+        {dailyChallengeComplete && (
+          <div className="bg-emerald-500/10 border border-emerald-500/25 rounded-2xl px-4 py-3 text-emerald-300 text-sm font-mono">
+            Daily challenge complete{challengeBonus > 0 ? ` • ${Math.round(challengeBonus * 100)}% streak bonus active` : ''}
+          </div>
+        )}
+
         {/* Action Buttons */}
         <div className="flex flex-col space-y-3">
           <button 

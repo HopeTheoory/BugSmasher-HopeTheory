@@ -123,7 +123,7 @@ export class ReferralManager {
     let next = null;
     
     for (const tier of REWARD_TIERS) {
-      if (this.totalReferrals >= tier.referrals) {
+      if (referrals >= tier.referrals) {
         current = tier;
       } else if (!next) {
         next = tier;

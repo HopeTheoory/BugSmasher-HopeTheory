@@ -1,5 +1,5 @@
-import { Crown, Lock, Check, X, Sparkles, Heart, Zap, Gem, Rocket, Ban } from 'lucide-react';
-import { PREMIUM_PERKS, premiumManager } from '../game/PremiumManager';
+import { Crown, Check, X, Sparkles, Heart, Zap, Gem, Rocket, Ban } from 'lucide-react';
+import { premiumManager } from '../game/PremiumManager';
 
 interface PremiumStoreProps {
   onClose: () => void;
