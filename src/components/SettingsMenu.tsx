@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Volume2, VolumeX, Music, Music2, Trophy, Bug, Clock, Gamepad2, Award, Flame, ShoppingBag, Crown, Globe, Star, Users, Sparkles } from 'lucide-react';
+import { X, Volume2, VolumeX, Music, Music2, Trophy, Bug, Clock, Gamepad2, Award, Flame, ShoppingBag, Crown, Globe, Users } from 'lucide-react';
 import { soundManager } from '../game/SoundManager';
 import { saveManager } from '../game/SaveManager';
 import { achievementSystem } from '../game/AchievementSystem';
@@ -8,7 +8,6 @@ import { PremiumStore } from './PremiumStore';
 import { BiomeSelector } from './BiomeSelector';
 import { biomeManager } from '../game/BiomeManager';
 import { premiumManager } from '../game/PremiumManager';
-import { referralManager } from '../game/ReferralManager';
 import { ViralShareButton, CopyReferralLink, ReferralProgress } from './ViralShare';
 
 interface SettingsMenuProps {

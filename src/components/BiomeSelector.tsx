@@ -1,7 +1,6 @@
 import { Lock, Unlock } from 'lucide-react';
 import { BIOMES } from '../game/BiomeConfig';
 import { biomeManager } from '../game/BiomeManager';
-import { saveManager } from '../game/SaveManager';
 
 interface BiomeSelectorProps {
   onSelectBiome: (biomeId: string) => void;
@@ -9,8 +8,6 @@ interface BiomeSelectorProps {
 }
 
 export function BiomeSelector({ onSelectBiome, currentBiomeId }: BiomeSelectorProps) {
-  const current = biomeManager.getCurrentBiome();
-
   return (
     <div className="bg-zinc-900/80 backdrop-blur-sm rounded-xl p-4 border border-white/5">
       <h3 className="text-xs text-zinc-500 uppercase tracking-widest font-mono mb-3">Biomes</h3>

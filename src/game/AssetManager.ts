@@ -18,7 +18,7 @@ export class AssetManager {
     }
 
     const promises = this.defaultAssets.map((url) => {
-      return new Promise<void>((resolve, reject) => {
+      return new Promise<void>((resolve) => {
         const img = new Image();
         img.crossOrigin = 'anonymous';
         img.onload = () => {

@@ -25,13 +25,6 @@ export function MainMenu({ onStart }: { onStart: () => void }) {
     onStart();
   };
 
-  const handlePlayAsGuest = () => {
-    soundManager.init();
-    soundManager.uiClick();
-    authManager.signInAsGuest();
-    onStart();
-  };
-
   const handleSignIn = () => {
     soundManager.init();
     soundManager.uiClick();

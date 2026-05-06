@@ -130,6 +130,8 @@ src/
 - **Production:** https://bugsmasher-ten.vercel.app
 - **GitHub:** https://github.com/FahadIbrahim93/BugSmasher-HopeTheory
 - **Supabase:** https://supabase.com/dashboard/project/YOUR_PROJECT_ID
+- **Vercel config:** `vercel.json` defines the Vite build command, `dist` output directory, and SPA fallback rewrites.
+- **Deployment runbook:** See `docs/DEPLOYMENT_2026-05-06.md` for environment variables and release verification steps.
 
 ---
 

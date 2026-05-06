@@ -1,13 +1,9 @@
-import { X, User, Mail, Lock, Crown, Trophy, LogOut, ArrowRight, AlertCircle, CheckCircle, Star, Flame, Gamepad2 } from 'lucide-react';
+import { X, User, Crown, LogOut, AlertCircle, CheckCircle, Star } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { authManager } from '../game/database/AuthManager';
 import { statsManager } from '../game/database/StatsManager';
 import { leaderboardManager } from '../game/database/LeaderboardManager';
 import { soundManager } from '../game/SoundManager';
-
-interface AccountScreenProps {
-  onClose: () => void;
-}
 
 const GoogleIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24">

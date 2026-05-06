@@ -87,7 +87,7 @@ export class SoundManager {
       
       osc.start();
       osc.stop(this.ctx.currentTime + duration);
-    } catch (e) {
+    } catch {
       // Ignore audio errors if context is in a weird state
     }
   }
